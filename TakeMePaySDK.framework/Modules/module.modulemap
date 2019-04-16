@@ -1,0 +1,6 @@
+framework module TakeMePaySDK {
+  umbrella header "TakeMePaySDK.h"
+
+  export *
+  module * { export * }
+}
