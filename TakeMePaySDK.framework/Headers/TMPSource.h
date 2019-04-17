@@ -28,7 +28,7 @@
 @property (nonatomic, strong, readonly) NSNumber *amount;
 
 /**
- The client secret of the source, used for TakeMe Pay SDK ( client side ) fetching of a source using a publishable key, which means if you want to retrieve source by using publishable key, you must use client secret value, the client secret value is getting when you create it.
+ The client secret of the source, used for TakeMe Pay SDK ( client side ) fetching of a source using a public key, which means if you want to retrieve source by using public key, you must use client secret value, the client secret value is getting when you create it.
  */
 @property (nonatomic, strong, readonly) NSString *clientSecret;
 
@@ -58,7 +58,7 @@
 @property (nonatomic, strong, readonly) NSString *sourceDescription;
 
 /**
- Indicates whether current environment is sandbox ( for debugging purpose ) environment, it's decided by the type of publishable key you provided in TMPConstants.h.
+ Indicates whether current environment is sandbox ( for debugging purpose ) environment, it's decided by the type of public key you provided in TMPConstants.h.
  */
 @property (nonatomic, assign, readonly) BOOL sandboxEnv;
 

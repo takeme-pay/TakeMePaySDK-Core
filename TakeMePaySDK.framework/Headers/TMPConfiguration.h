@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Publishable key, it will be fetched from TMPConstants.h.
  */
-@property (nonatomic, strong, readonly) NSString *publishableKey;
+@property (nonatomic, strong, readonly) NSString *publicKey;
 
 /**
  Base url for TakeMe Pay SDK network connection, can't be modified.

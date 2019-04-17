@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Publishable key before use TakeMePay
  */
-@property (class) NSString *publishableKey;
+@property (class) NSString *publicKey;
 
 /**
  Your company name, it may be used for user interface display
