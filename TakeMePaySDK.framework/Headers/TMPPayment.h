@@ -59,18 +59,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface TMPPayment (TMPDelegateDispatch)
-
-/**
- For some reasons, some methods of TMPPaymentDelegate are out of TMPPayment control, TMPPayment couldn't get all state changed notification, so if you customize your `sourceParamsPreparer`, we strongly suggest you could dispatch information to the specific delegate method, it will make your TMPPayment.delegate get all notifications, in single place.
-
- @param selector Delegate method selector.
- @param args Arguments of delegate method, if it's nil, pass NSNull.null, if it's primitive value, use autoboxing to wrap it.
- */
-- (void)dispatchDelegateMethods:(SEL)selector args:(NSArray *)args;
-
-@end
-
 @interface TMPPayment (TMPUseDefaultUI)
 
 /**
