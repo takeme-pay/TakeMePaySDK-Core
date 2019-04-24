@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol TMPPaymentAuthorizable <NSObject>
 
 @required
+
+// the method should be called on the main queue
 - (void)requestPaymentAuthorization:(TMPPayment *)payment source:(TMPSource *)source userInfo:(nullable NSDictionary *)userInfo completion:(void(^)(TMPPaymentRequestState currentState, NSError * _Nullable error))completion;
 
 @end
