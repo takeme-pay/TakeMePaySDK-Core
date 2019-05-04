@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param delegate The object which received payment notification from TakeMe Pay SDK.
  @return TMPPayment instance, if sourceParams or preparer is nil, the result of the initializer would be nil.
  */
-- (nullable instancetype)initWithSourceParams:(TMPSourceParams *)sourceParams sourceParamsPreparer:(id<TMPPaymentSourceParamsPreparer>)preparer delegate:(id<TMPPaymentDelegate>)delegate;
+- (nullable instancetype)initWithSourceParams:(TMPSourceParams *)sourceParams sourceParamsPreparer:(id<TMPPaymentSourceParamsPreparer>)preparer delegate:(nullable id<TMPPaymentDelegate>)delegate;
 
 /**
  Once you use proper sourceParams and preparer to create an instance of TMPPayment, invoke this method to start payment process. Normally, after you call this method, the checkout counter should show on the screen immediately.
@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param delegate The object which received payment notification from TakeMe Pay SDK.
   @return TMPPayment instance, if sourceParams is nil, the result of the initializer would be nil.
  */
-- (nullable instancetype)initWithSourceParams:(TMPSourceParams *)sourceParams delegate:(id<TMPPaymentDelegate>)delegate;
+- (nullable instancetype)initWithSourceParams:(TMPSourceParams *)sourceParams delegate:(nullable id<TMPPaymentDelegate>)delegate;
 
 @end
 
