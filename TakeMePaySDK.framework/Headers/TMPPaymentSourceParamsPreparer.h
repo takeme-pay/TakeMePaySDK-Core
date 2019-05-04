@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Abstract method, subclass should override it.
  
- Return the desired payment method you got from TMPSourceTypesContext previously, this method would be called after you call `completion` callback of TMPPaymentSourceParamsProcessable method, your `processSourceParams:completion:` method could ignore processing payment method related logic, TMPPayment would handle with it.
+ Return the desired payment method you got from TMPSourceTypesContext previously, this method would be called after you call `completion` callback of TMPPaymentSourceParamsProcessable method, your `payment:processSourceParams:completion:` method could ignore processing payment method related logic, TMPPayment would handle with it.
  
  @return payment method instance
  */
