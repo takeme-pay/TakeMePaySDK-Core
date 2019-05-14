@@ -12,6 +12,7 @@
 #import <TakeMePaySDK/TMPPaymentEnums.h>
 #import <TakeMePaySDK/TMPPaymentDelegate.h>
 #import <TakeMePaySDK/TMPPaymentAuthorizable.h>
+#import <TakeMePaySDK/TMPPayment+TMPClosureSupport.h>
 
 #import <TakeMePaySDK/TMPPaymentMethod.h>
 
