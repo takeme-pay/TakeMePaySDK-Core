@@ -14,8 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSError (TMPErrorGenerator)
 
-+ (instancetype)tmp_failedToLoadPaymentError:(TMPSourceParams *)sourceParams;
-
 + (instancetype)tmp_sourcePollingTimeoutError;
 + (instancetype)tmp_sourcePollerInitializationError;
 
@@ -25,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)tmp_requestSourceTypesFromRemoteErrorBecauseOfParams;
 + (instancetype)tmp_requestSourceTypesFromRemoteError:(NSError *)networkError;
++ (instancetype)tmp_requestSourceTypesFromRemoteParsedError;
 
 + (instancetype)tmp_normalizeRedirectTypeFromSourceError:(TMPSource *)source;
 + (instancetype)tmp_openUrlErrorWhenRedirect:(NSURL *)url source:(TMPSource *)source channel:(NSString *)channel;

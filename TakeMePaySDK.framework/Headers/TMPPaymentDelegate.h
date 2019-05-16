@@ -23,14 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 
 /**
- Invoked if TMPPayment initialization failed, the reason of why initialization failed would be present.
-
- @param payment Associated TMPPayment instance.
- @param error The reason of initialization failed.
- */
-- (void)payment:(TMPPayment *)payment didFailedToLoadWithError:(nonnull NSError *)error;
-
-/**
  Invoked instantly before using the params to create the source by requesting TakeMe Pay backend.
 
  @param payment Associated TMPPayment instance.

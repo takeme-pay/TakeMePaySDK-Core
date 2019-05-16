@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #define TMP_PAYMENT_METHOD(SourceType) \
-FOUNDATION_EXPORT void TMPRegisterPaymentMethod(Class class, NSString *SourceType); \
+FOUNDATION_EXPORT void TMPRegisterPaymentMethod(Class class, NSString *sourceType); \
 + (void)load { TMPRegisterPaymentMethod(self, SourceType); }
 
 NS_ASSUME_NONNULL_BEGIN
