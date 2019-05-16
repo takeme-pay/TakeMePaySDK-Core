@@ -37,6 +37,7 @@
 #import <TakeMePaySDK/TMPSourceTypeConstants.h>
 #import <TakeMePaySDK/TMPPaymentMethodRegisterSupport.h>
 #import <TakeMePaySDK/TMLoggerEnums.h>
+#import <TakeMePaySDK/TMUtils.h>
 
 //! Project version number for TakeMePaySDK.
 FOUNDATION_EXPORT double TakeMePaySDKVersionNumber;
