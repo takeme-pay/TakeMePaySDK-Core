@@ -17,9 +17,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 /**
- Parent TMPPayment instance
+ Parent TMPPayment instance, here use strong reference because we want to make a retain recycle, so that user can just create a TMPPayment instance and doesn't need to retain it.
  */
 @property (nonatomic, strong) TMPPayment *payment;
+
+/**
+ The latest error the preparer received from TMPPayment by listening TMPPaymentDelegate methods
+ */
+@property (nonatomic, strong) NSError *latestError;
 
 /**
  Abstract method, subclass should override it.
@@ -42,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param decoratedSourceParamsBlock Pass in your decorated source params to this block
  @param completion You must call this completion callback in any cases, if the payment is no longer needed, pass nil ( e.g. you are going to dismiss the checkout counter view, the payment is no longer needed in this case, pass nil after dismiss the UI in preparer, if you pass non-nil value into completion block, it would rise a payment process up, no matter it's the first time or the second time be called ). The completion MAY be retained by the decorator, you should always assume it would be retained.
  */
-- (void)prepareSourceParams:(TMPSourceParams *)rawSourceParams availableSourceTypes:(NSArray<TMPPaymentMethod *> *)sourceTypes userInfo:(nullable NSDictionary *)userInfo decoratedSourceParams:(void(^)(TMPSourceParams *decoratedSourceParams))decoratedSourceParamsBlock completion:(void(^)(TMPPaymentRequestState currentState, NSError * _Nullable error))completion;
+- (void)prepareSourceParams:(TMPSourceParams *)rawSourceParams availableSourceTypes:(NSArray<TMPPaymentMethod *> *)sourceTypes userInfo:(nullable NSDictionary *)userInfo decoratedSourceParams:(void(^)(TMPSourceParams *decoratedSourceParams))decoratedSourceParamsBlock completion:(void(^)(TMPPaymentResultState currentState, NSError * _Nullable error))completion;
 
 @end
 

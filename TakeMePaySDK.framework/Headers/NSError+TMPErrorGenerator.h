@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)tmp_genericPaymentErrorFromDictionaryError:(NSDictionary *)dictionary;
 
++ (instancetype)tmp_authorizationErrorFromDictionaryError:(NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

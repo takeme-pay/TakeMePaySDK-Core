@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 
 // the method should be called on the main queue
-- (void)requestPaymentAuthorization:(TMPPayment *)payment source:(TMPSource *)source userInfo:(nullable NSDictionary *)userInfo completion:(void(^)(TMPPaymentRequestState currentState, NSError * _Nullable error))completion;
+- (void)requestPaymentAuthorization:(TMPPayment *)payment source:(TMPSource *)source userInfo:(nullable NSDictionary *)userInfo completion:(void(^)(TMPPaymentAuthorizationState authorizationState, NSError * _Nullable error))completion;
 
 @end
 

@@ -22,9 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param payment The parent payment instance.
  @param params Raw source params, may only contains very limit information provided by you in the init method of TMPPayment, you might need to process it and fill every required property in the decorator.
+ @param userInfo Extra information, for extensible abilities in the future.
  @param completion You must call this completion callback in success or failure case, if it is failed case, just pass nil simply, the completion MAY be retained by the decorator, you should always assume it would be retained.
  */
-- (void)payment:(TMPPayment *)payment processSourceParams:(TMPSourceParams *)params completion:(void(^)(TMPSourceParams * __nullable processedSourceParams))completion;
+- (void)payment:(TMPPayment *)payment processSourceParams:(TMPSourceParams *)params userInfo:(nullable NSDictionary *)userInfo completion:(void(^)(TMPSourceParams * __nullable processedSourceParams))completion;
 
 @end
 

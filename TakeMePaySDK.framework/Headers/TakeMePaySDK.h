@@ -33,7 +33,6 @@
 // SDK used modules
 #import <TakeMePaySDK/TMPURLListener.h>
 #import <TakeMePaySDK/TMPPaymentAuthViaWebRedirect.h>
-#import <TakeMePaySDK/TMPPaymentRequestStatePoller.h>
 #import <TakeMePaySDK/TMPSourceTypeConstants.h>
 #import <TakeMePaySDK/TMPPaymentMethodRegisterSupport.h>
 #import <TakeMePaySDK/TMLoggerEnums.h>
