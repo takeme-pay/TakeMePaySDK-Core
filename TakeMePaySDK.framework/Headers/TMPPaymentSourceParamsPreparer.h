@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The latest error the preparer received from TMPPayment by listening TMPPaymentDelegate methods
  */
-@property (nonatomic, strong) NSError *latestError;
+@property (nonatomic, strong, nullable) NSError *latestError;
 
 /**
  Abstract method, subclass should override it.
